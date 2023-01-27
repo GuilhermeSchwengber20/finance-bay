@@ -1,8 +1,10 @@
 <template>
-  <div class="containerBtn">
+  <div class="btn">
         <img v-if="icon == 'income'" src="../assets/images/income.png"/>
         <img v-else src="../assets/images/spending.png" />
-        {{  text }}
+        &nbsp;
+        <span>{{  text }}</span>
+        
   </div>
 </template>
 <script>
@@ -15,21 +17,18 @@ export default {
 }
 </script>
 <style scoped>
-.containerBtn{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-}
 .btn{
-    background-color: var(--bg-btn);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    width: 100%;
-
+  background-color: var(--bg-btn);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: 50%;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.btn span{
+  font-weight: 600;
 }
 </style>

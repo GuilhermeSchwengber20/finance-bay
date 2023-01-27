@@ -1,10 +1,12 @@
 <template>
   <div class="containerPage">
     <div class="containerHeader">
-        <h2>Hello, Joshephine</h2>
-        <span>Here you can view overview of yout budget</span>
+      <h2>Hello, Joshephine</h2>
+      <span>Here you can view overview of yout budget</span>
     </div>
-    <MyBudget />
+    <div>
+      <MyBudget />
+    </div>
   </div>
 </template>
 <script>
