@@ -4,8 +4,11 @@
       <h2>Hello, Joshephine</h2>
       <span>Here you can view overview of yout budget</span>
     </div>
-    <div>
+    <div class="wallet">
       <MyBudget />
+    </div>
+    <div class="footer">
+      <MenuFooter />
     </div>
   </div>
 </template>
@@ -17,6 +20,11 @@ export default {
 <style scoped>
 .containerPage{
   height: 100vh;
+  overflow: none;
+}
+
+.wallet{
+  height: 72vh;
 }
 
 .containerHeader h2{
