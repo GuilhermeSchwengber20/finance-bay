@@ -11,8 +11,8 @@
 :root{
     --bg: #8FE7F5;
     --bg-btn: #30dbf5;
-    --spending: rgb(255, 84, 96);
-    --income: rgb(65,220,101);
+    --spending: #ff5460;
+    --income: #41dc65;
     --arrow: rgb(170, 168, 168);
 }
 

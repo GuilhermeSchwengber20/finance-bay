@@ -2,8 +2,6 @@
   <div class="card">
     <div class="headerCard">
       <div class="containerImg">
-        <!-- <img v-if="type == 'income'" src="../assets/images/income.png" />
-            <img v-else src="../assets/images/spending.png" /> -->
         <!-- INCOME -->
 
         <!-- INCOME -->
@@ -74,16 +72,19 @@
           </g>
         </svg>
       </div>
-      <div>
+      <div v-if="type == 'income'" class="increase-decrease">
         <!-- Mudar para variavel futuramente -->
+        <img src="../assets/images/increase.png" class="icon"/>
         <span
-          v-if="type == 'income'"
           style="color: var(--income); font-weight: 600"
-          >+2,63%</span
         >
-        <span v-else style="color: var(--spending); font-weight: 600"
-          >-1,89%</span
-        >
+          +2,63%
+        </span>
+      </div>
+      <div v-else  class="increase-decrease"> 
+        <img src="../assets/images/decrease.png" class="icon"/>
+        <span style="color: var(--spending); font-weight: 600"
+          >-1,89%</span>
       </div>
     </div>
     <div class="footerCard">
@@ -98,7 +99,9 @@
         >
         <span class="price">$ 3.000,00</span>
       </div>
-      <div class="containerIcon"></div>
+      <div class="containerIcon">
+        <img src="../assets/images/link.png" />
+      </div>
     </div>
   </div>
 </template>
@@ -122,7 +125,11 @@ export default {
   background-color: #000;
   border-radius: 50%;
   width: 35px;
-  text-align: center;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerCard {
@@ -149,11 +156,21 @@ export default {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid black;
 }
 
 svg {
   width: 25px !important;
   color: #fff;
+}
+.icon{
+  width: 20px;
+}
+
+.increase-decrease{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
 }
 </style>

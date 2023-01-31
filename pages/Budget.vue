@@ -8,18 +8,24 @@
       <MyBudget />
     </div>
     <div class="footer">
-      <MenuFooter />
+      <MenuFooter :selectedItem="{title: 'My Budget'}" :index="0"/>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "Budget",
+
+  mounted(){
+    window.addEventListener("wheel", (e) => {
+      e.preventDefault();
+    })
+  }
 }
 </script>
 <style scoped>
 .containerPage{
-  height: 100vh;
+  height: 90vh;
   overflow: none;
 }
 
