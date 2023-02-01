@@ -91,6 +91,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   gap: 40px;
+  background-color: #FFF;
 }
 
 .item{
