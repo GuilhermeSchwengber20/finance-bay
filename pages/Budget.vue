@@ -7,6 +7,12 @@
     <div class="wallet">
       <MyBudget />
     </div>
+    <div class="plans">
+      <MyPlan />
+    </div>
+    <div class="transactions">
+      <MyTransactions />
+    </div>
     <div class="footer">
       <MenuFooter :selectedItem="{title: 'My Budget'}" :index="0"/>
     </div>
@@ -25,12 +31,13 @@ export default {
 </script>
 <style scoped>
 .containerPage{
-  height: 90vh;
+  height: 93vh;
   overflow: none;
+  background-color: #f7f7f7;
 }
 
 .wallet{
-  height: 72vh;
+  height: 40vh;
 }
 
 .containerHeader h2{
